@@ -1,0 +1,24 @@
+[package]
+name = "efm32gg12b810"
+version = "0.1.0"
+authors = [
+    "Thomas Kuenzel <tkuenzel@gmx.com>"
+]
+description = "Peripheral access API for EFM32GG12B810 microcontrollers"
+documentation = "https://docs.rs/efm32gg12b810"
+keywords = ["no-std", "arm", "cortex-m", "efm32"]
+license = "MIT"
+repository = "https://github.com/tkuenzel/efm32gg12b810"
+readme = "README.md"
+
+[dependencies]
+bare-metal = "0.2.5"
+cortex-m = "0.5.11"
+vcell = "0.1.3"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.5"
+
+[features]
+rt = ["cortex-m-rt/device"]
